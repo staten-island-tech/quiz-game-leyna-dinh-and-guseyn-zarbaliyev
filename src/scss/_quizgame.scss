@@ -22,9 +22,10 @@
 }
 
 .answers {
+  margin-left: -5rem;
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   cursor: pointer;
   margin-right: 1rem;
   color: $text-color;
@@ -44,7 +45,7 @@
   cursor: pointer;
   margin-right: 0.1rem;
   margin-bottom: 2rem;
-  background-color: $tertiary;
+  /* background-color: $tertiary; */
   border-radius: 1rem;
   padding: 0.5rem;
   color: $text-color;

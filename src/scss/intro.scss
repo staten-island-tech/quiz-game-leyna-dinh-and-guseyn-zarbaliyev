@@ -1,0 +1,21 @@
+.intro {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 15rem;
+  color: rgb(255, 255, 255);
+  font-family: "Antic", sans-serif;
+  font-size: 1.5rem;
+}
+
+.intro-message {
+  font-style: italic;
+}
+
+.intro-message,
+.intro-paragraph {
+  text-align: center;
+  width: 33%;
+}

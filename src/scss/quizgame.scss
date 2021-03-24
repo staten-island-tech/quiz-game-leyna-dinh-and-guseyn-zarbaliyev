@@ -1,0 +1,24 @@
+@import "var";
+
+.entries {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.questions {
+  color: $text-color;
+  font-family: "Antic", sans-serif;
+  font-size: 3rem;
+  background-color: $secondary;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.answers {
+  color: $text-color;
+  font-family: "Antic", sans-serif;
+  font-size: 1.1rem;
+}

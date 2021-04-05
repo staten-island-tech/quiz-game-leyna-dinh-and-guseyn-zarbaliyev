@@ -69,10 +69,10 @@ const players = [
     name: "fool",
     score: 1,
   },
-  { name: "nolife", score: 10 },
+  { name: "nolife", score: 5 },
 ];
 //feel free to add more ppl in the array lol
-//also make the scores make sense bc of question length. rn nolife scored 10/3 lmao
+//also make the scores make sense bc of question length. rn nolife scored 5/3 lmao
 const addName = document.forms["add-name"];
 //NOTE (to self): SINCE IM DOING THIS BACKWARDS
 //LINK UP NEXT FUNCTION TO RUN WHEN QUESTIONS END
@@ -103,3 +103,4 @@ addName.addEventListener("submit", function (e) {
   //replaces everything on page with leaderboard
   //          why did i spend so much time on this
 });
+console.log(DOMSelectors.choices);

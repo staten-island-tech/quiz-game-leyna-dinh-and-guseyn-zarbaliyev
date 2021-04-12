@@ -13,7 +13,6 @@ import { DOMSelectors } from "./DOM";
   console.log(DOMSelectors);
   //   const shuffledQuestions, currentQuestionIndex;
   const startButton = document.getElementById("start-btn");
-  startButton.addEventListener("click", startGame);
   function startGame() {
     console.log("started");
     // shuffledQuestions = questions.sort(() => Math.random() - 0.5);
@@ -104,6 +103,7 @@ const questions = [
       { text: "10", correct: false },
     ],
   },
+
   {
     question: "What is 6 + 2",
     answers: [

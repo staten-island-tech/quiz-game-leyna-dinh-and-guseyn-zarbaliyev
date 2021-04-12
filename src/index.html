@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/main.scss">
     <style> @import url('https://fonts.googleapis.com/css2?family=Antic&display=swap'); </style>
+
     <title>Quiz Game</title>
 </head>
 <body>
@@ -20,12 +21,18 @@
         <p class="intro-paragraph">This is a really shitty quiz about weeb stuff. Why weeb stuff you may ask? Because I like anime and screw you! If you get all 20 questions correct then you unlock the secret super duper hyper weeb ending! Exciting, isn't it!?! JK THIS IS A FRICKEN POP QUIZ BABY! WOOOOOOOOOOO! RANDOM FACT TIME! However, you still unlock the secret super duper hyper weeb ending.</p>
     </div>
 
+    <form id="add-name">
+        <input type="text" id="player" placeholder="Name" />
+        <button>Add</button>
+    </form>
+
 <!--     <div class="reveal-div">
     <button class="reveal" id="reveal-button">Reveal Quiz</button>
     </div>
 
     <div class="quiz-game"> -->
-
+        
+<div class="questions-container">
         <div class="entries entry1">
             <p class="questions">Question 1
                 <p class="term term1">What is an apple?</p>
@@ -169,9 +176,9 @@
                     </label>
                 </div>
                 </p>
-        </div>
-        
+        </div>  
     </div>
+</div>
 
 </body>
 </html>

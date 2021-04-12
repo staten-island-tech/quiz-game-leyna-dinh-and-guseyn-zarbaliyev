@@ -5,28 +5,14 @@
 @import "reveal";
 
 body {
-  background-color: #0e0b16;
-#progressBar {
-  width: 20rem;
-  height: 2rem;
-  border: 0.2rem solid greenyellow;
-  margin-top: 2rem;
-  border-radius: 5rem;
+  background-color: #ffffff;
+  /*   background-color: #0e0b16; */
 }
-#progressBarFull {
-  height: 100%;
-  background-color: greenyellow;
-  width: 0%;
-}
+
 .title {
   text-align: center;
 }
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 .results {
   font-size: 2rem;
   width: 90vw;

@@ -6,6 +6,7 @@ function revealQuiz() {
   console.log("Revealing...");
 }
  */
+
 import { DOMSelectors } from "./DOM";
 (function () {
   console.log("connected");
@@ -193,9 +194,11 @@ const buttonLabels = [
 DOMSelectors.addName.addEventListener("submit", function (e) {
   e.preventDefault();
   DOMSelectors.questionContainer.innerHTML = ``;
+
   //clear out name input and anything else where the questions will be
   // coming up : way too many variables for no reason. I have no idea if all of them are gonna be used
   // but hey its flexible so thats a plus. less effort later.
+
   questions.forEach((question) => {
     const answerBtnTags = buttonLabels[questions.indexOf(question)];
     const questionNumber = questions.indexOf(question) + 1;

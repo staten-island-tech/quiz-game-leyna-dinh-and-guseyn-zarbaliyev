@@ -1,11 +1,14 @@
 {
   "name": "quiz-game-leyna-dinh-and-guseyn-zarbaliyev",
-  "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.2"
+  },
   "scripts": {
-    "start": "parcel src/index.html",
-    "build-prod": "parcel build src/index.html"
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html"
   },
   "repository": {
     "type": "git",
@@ -18,8 +21,6 @@
     "url": "https://github.com/staten-island-tech/quiz-game-leyna-dinh-and-guseyn-zarbaliyev/issues"
   },
   "homepage": "https://github.com/staten-island-tech/quiz-game-leyna-dinh-and-guseyn-zarbaliyev#readme",
-  "devDependencies": {
-    "parcel-bundler": "^1.12.3",
-    "sass": "^1.32.8"
-  }
+  "version": "1.0.0",
+  "description": ""
 }

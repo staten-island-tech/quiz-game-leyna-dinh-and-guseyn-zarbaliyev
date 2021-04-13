@@ -1,13 +1,5 @@
-/* const revealButton = document.getElementById("reveal-button");
-
-revealButton.addEventListener("click", revealQuiz);
-
-function revealQuiz() {
-  console.log("Revealing...");
-}
- */
-
 import { DOMSelectors } from "./DOM";
+
 (function () {
   console.log("connected");
   console.log(DOMSelectors);
@@ -126,11 +118,10 @@ const questions = [
 // REPLACE ABOVE WITH FUNCTIONING VARIABLES. please
 // replace questions too
 const players = [
-  {
-    name: "fool",
-    score: 1,
-  },
-  { name: "nolife", score: 6 },
+  { name: "Steve Steve", score: 1 },
+  { name: "Walter White", score: 6 },
+  { name: "Macross 82-99", score: 2 },
+  { name: "Polish Government", score: 4 },
 ];
 //feel free to add more ppl in the arrays lol
 //also make the scores make sense bc of question length. rn nolife scored 6/5 lmao

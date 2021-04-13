@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/main.scss">
     <style> @import url('https://fonts.googleapis.com/css2?family=Antic&display=swap'); </style>
-
     <title>Quiz Game</title>
+
 </head>
 <body>
 
-    
+    <div class="background">
+    </div>
 
     <div class="header">
         <header class="maintitle">Big Daddy Quiz Game</header>
@@ -20,12 +21,12 @@
 
     <div class="intro">
         <p class="intro-message">Hello and Welcome!</p>
-        <p class="intro-paragraph">This is a really shitty quiz about weeb stuff. Why weeb stuff you may ask? Because I like anime and screw you! If you get all 20 questions correct then you unlock the secret super duper hyper weeb ending! Exciting, isn't it!?! JK THIS IS A FRICKEN POP QUIZ BABY! WOOOOOOOOOOO! RANDOM FACT TIME! However, you still unlock the secret super duper hyper weeb ending.</p>
+        <p class="intro-paragraph">This is a really shitty quiz about weeb stuff. Why weeb stuff you may ask? Because I like anime and screw you! If you get all 5 questions correct then you unlock the secret super duper hyper weeb ending! Exciting, isn't it!?! JK THIS IS A FRICKEN POP QUIZ BABY! WOOOOOOOOOOO! RANDOM FACT TIME! However, you still unlock the secret super duper hyper weeb ending.</p>
     </div>
 
-    <form id="add-name">
+    <form class="name-form" id="add-name">
         <input type="text" id="player" placeholder="Name" />
-        <button>Add</button>
+        <button class="button-form">Add</button>
     </form>
 
 <!--     <div class="reveal-div">
@@ -37,28 +38,28 @@
 <div class="questions-container">
         <div class="entries entry1">
             <p class="questions">Question 1
-                <p class="term term1">What is an apple?</p>
+                <p class="term term1">The Cuban Missile Crisis was started in response the the United States deploying missiles in...</p>
                 <div class="answers answer1">
                     
                     <label for="A1" class="answer-btn A1">
                         <input type="radio" id="A1" name="Q1" value="A1" class="btn-input">
                         <div class="radio-btn"></div>
-                        A fruit
+                        Ukriane 
                     </label>
                     <label for="A2" class="answer-btn A2">
                         <input type="radio" id="A2" name="Q1" value="A2" class="btn-input">
                         <div class="radio-btn"></div>
-                        A vegetable
+                        Turkey
                     </label>
                     <label for="A3" class="answer-btn A3">
                         <input type="radio" id="A3" name="Q1" value="A3" class="btn-input">
                         <div class="radio-btn"></div>
-                        Fast food
+                        Italy
                     </label>
                     <label for="A4" class="answer-btn A4">
                         <input type="radio" id="A4" name="Q1" value="A4" class="btn-input">
                         <div class="radio-btn"></div>
-                        Nasty
+                        Cuba
                     </label>
                 </div>
                 </p>
@@ -66,28 +67,28 @@
 
         <div class="entries entry2">
             <p class="questions">Question 2
-                <p class="term term2">What is an apple?</p>
+                <p class="term term2">The most downloaded game of all time is...</p>
                 <div class="answers answer2">
                     
                     <label for="B1" class="answer-btn B1">
                         <input type="radio" id="B1" name="Q2" value="B1" class="btn-input">
                         <div class="radio-btn"></div>
-                        Answer One
+                        Fornite
                     </label>
                     <label for="B2" class="answer-btn B2">
                         <input type="radio" id="B2" name="Q2" value="B2" class="btn-input">
                         <div class="radio-btn"></div>
-                        Answer Two
+                        Tetris
                     </label>
                     <label for="B3" class="answer-btn B3">
                         <input type="radio" id="B3" name="Q2" value="B3" class="btn-input">
                         <div class="radio-btn"></div>
-                        Answer Three
+                        Minecraft
                     </label>
                     <label for="B4" class="answer-btn B4">
                         <input type="radio" id="B4" name="Q2" value="B4" class="btn-input">
                         <div class="radio-btn"></div>
-                        Answer Four
+                        Call of Duty: Warzone / Modern Warfare 2019
                     </label>
                 </div>
                 </p>
@@ -95,28 +96,28 @@
 
         <div class="entries entry3">
             <p class="questions">Question 3
-                <p class="term term3">What is an apple?</p>
+                <p class="term term3">How many hairs does Mr. Whalen have on his head?</p>
                 <div class="answers answer3">
                     
                     <label for="C1" class="answer-btn C1">
                         <input type="radio" id="C1" name="Q3" value="C1" class="btn-input">
                         <div class="radio-btn"></div>
-                        Answer One
+                        2 ?
                     </label>
                     <label for="C2" class="answer-btn A2">
                         <input type="radio" id="C2" name="Q3" value="C2" class="btn-input">
                         <div class="radio-btn"></div>
-                        Answer Two
+                        9,007,199,254,740,991 ?
                     </label>
                     <label for="C3" class="answer-btn C3">
                         <input type="radio" id="C3" name="Q3" value="C3" class="btn-input">
                         <div class="radio-btn"></div>
-                        Answer Three
+                        3.14 ?
                     </label>
                     <label for="C4" class="answer-btn C4">
                         <input type="radio" id="C4" name="Q3" value="C4" class="btn-input">
                         <div class="radio-btn"></div>
-                        Answer Four
+                        NONE LMAO
                     </label>
                 </div>
                 </p>
@@ -124,13 +125,13 @@
 
         <div class="entries entry4">
             <p class="questions">Question 4
-                <p class="term term1">What is an apple?</p>
+                <p class="term term1"></p>
                 <div class="answers answer4">
                     
                     <label for="D1" class="answer-btn D1">
                         <input type="radio" id="D1" name="Q4" value="D1" class="btn-input">
                         <div class="radio-btn"></div>
-                        Answer One
+                        55032
                     </label>
                     <label for="D2" class="answer-btn D2">
                         <input type="radio" id="D2" name="Q4" value="D2" class="btn-input">
@@ -182,6 +183,8 @@
     </div>
 </div>
 </div>
+
     <script src="js/index.js"></script>
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "name": "quiz-game-leyna-dinh-and-guseyn-zarbaliyev",
-  "main": "index.html",
+  "main": "dist/index.html",
   "dependencies": {},
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2",

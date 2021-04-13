@@ -25,7 +25,7 @@ const questions = [
   {
     question: "The most downloaded game of all time is...",
     answers: [
-      { text: "Fornite", correct: false },
+      { text: "Fortnite", correct: false },
       { text: "Tetris", correct: false },
       { text: "Minecraft", correct: true },
       { text: "Call of Duty: Warzone / Modern Warfare 2019", correct: false },
@@ -44,10 +44,10 @@ const questions = [
   {
     question: "Who refuses to get into the robot?",
     answers: [
-      { text: "4", correct: false },
-      { text: "2", correct: false },
-      { text: "6", correct: false },
-      { text: "8", correct: true },
+      { text: "Hank Hill", correct: false },
+      { text: "Naruto Uzumaki", correct: false },
+      { text: "Spike Spiegel", correct: false },
+      { text: "Shinji Ikari", correct: true },
     ],
   },
   {
@@ -64,7 +64,7 @@ const questions = [
 // replace questions too
 const players = [
   { name: "Steve Steve", score: 1 },
-  { name: "Walter White", score: 6 },
+  { name: "Walter White", score: 10 },
   { name: "Macross 82-99", score: 2 },
   { name: "Polish Government", score: 4 },
 ];
@@ -199,7 +199,7 @@ DOMSelectors.submitButton.addEventListener("click", function (e) {
   );
   //sorting by score, so highest at top
   console.log(leaderboardPlayers);
-  DOMSelectors.displayContainer.innerHTML = `<h1 class="leaderboard">Leaderboard</h1>`;
+  DOMSelectors.displayContainer.innerHTML = `<h1 class="leaderboard">Leaderboard</h1> <div class="ayaya-div">><img class="ayaya" src="https://i.imgur.com/rdA1WgC.gif"></div>`;
   leaderboardPlayers.forEach((individual) => {
     DOMSelectors.displayContainer.insertAdjacentHTML(
       "beforeend",
@@ -207,7 +207,8 @@ DOMSelectors.submitButton.addEventListener("click", function (e) {
     <div class="individual-results">
         <div class="individual">${individual.name}</div>
         <div class="individual-score ">${individual.score} of ${questions.length}</div>
-    </div>`
+    </div>
+  `
     );
   });
 });

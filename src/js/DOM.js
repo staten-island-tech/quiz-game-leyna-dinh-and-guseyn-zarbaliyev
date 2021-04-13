@@ -7,7 +7,8 @@ const DOMSelectors = {
   leaderboard: document.querySelector(".results"),
   addName: document.forms["add-name"],
   submitButton: document.querySelector(".submit-btn"),
-  quizForm: document.forms["quiz"],
+  quizForm: document.forms["submit-btn-div"],
+  finalboard: document.querySelector(".leaderboard"),
 };
 
 export { DOMSelectors };

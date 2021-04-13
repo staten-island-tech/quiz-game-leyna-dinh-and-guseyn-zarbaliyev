@@ -1,6 +1,6 @@
 @import "var";
 
-.reveal-div {
+.submit-btn-div {
   display: flex;
   justify-content: center;
   justify-self: center;
@@ -28,9 +28,5 @@
 }
 
 .submit-btn:hover {
-  transform: scale(1.2);
-}
-
-.submit-btn:active {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }

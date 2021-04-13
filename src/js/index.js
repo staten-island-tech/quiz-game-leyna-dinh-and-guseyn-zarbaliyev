@@ -1,63 +1,7 @@
 import { DOMSelectors } from "./DOM";
 
-(function () {
-  console.log("connected");
-  console.log(DOMSelectors);
-  //   const shuffledQuestions, currentQuestionIndex;
-  const startButton = document.getElementById("start-btn");
-  function startGame() {
-    console.log("started");
-    // shuffledQuestions = questions.sort(() => Math.random() - 0.5);
-    // currentQuestionIndex = 0;
-  }
-  const questions = [
-    {
-      question: "What is 2 + 2",
-      answers: [
-        { text: "4", correct: true },
-        { text: "2", correct: false },
-        { text: "6", correct: false },
-        { text: "10", correct: false },
-      ],
-    },
-    {
-      question: "What is 1 + 2",
-      answers: [
-        { text: "4", correct: false },
-        { text: "2", correct: false },
-        { text: "3", correct: true },
-        { text: "10", correct: false },
-      ],
-    },
-    {
-      question: "What is 3 + 2",
-      answers: [
-        { text: "5", correct: true },
-        { text: "2", correct: false },
-        { text: "6", correct: false },
-        { text: "10", correct: false },
-      ],
-    },
-    {
-      question: "What is 6 + 2",
-      answers: [
-        { text: "4", correct: false },
-        { text: "2", correct: false },
-        { text: "6", correct: false },
-        { text: "8", correct: true },
-      ],
-    },
-    {
-      question: "What is 2 + 9",
-      answers: [
-        { text: "4", correct: false },
-        { text: "2", correct: false },
-        { text: "11", correct: true },
-        { text: "10", correct: false },
-      ],
-    },
-  ];
-})();
+//Removed
+
 // just. completely ignore everything above this
 //also everything in the html except for the add name input and questions container
 // those are the only things that need to be taken from the HTML
@@ -69,35 +13,36 @@ import { DOMSelectors } from "./DOM";
 const score = 2;
 const questions = [
   {
-    question: "What is 2 + 2",
+    question:
+      "The Cuban Missile Crisis was started in response the the United States deploying missiles in...",
     answers: [
-      { text: "4", correct: true },
-      { text: "2", correct: false },
-      { text: "6", correct: false },
-      { text: "10", correct: false },
+      { text: "Turkey", correct: true },
+      { text: "Ukriane ", correct: false },
+      { text: "Italy", correct: false },
+      { text: "Cuba", correct: false },
     ],
   },
   {
-    question: "What is 1 + 2",
+    question: "The most downloaded game of all time is...",
     answers: [
-      { text: "4", correct: false },
-      { text: "2", correct: false },
-      { text: "3", correct: true },
-      { text: "10", correct: false },
+      { text: "Fornite", correct: false },
+      { text: "Tetris", correct: false },
+      { text: "Minecraft", correct: true },
+      { text: "Call of Duty: Warzone / Modern Warfare 2019", correct: false },
     ],
   },
   {
-    question: "What is 3 + 2",
+    question: "How many hairs does Mr. Whalen have on his head?",
     answers: [
-      { text: "5", correct: true },
       { text: "2", correct: false },
-      { text: "6", correct: false },
-      { text: "10", correct: false },
+      { text: "9,007,199,254,740,991", correct: false },
+      { text: "3.1415", correct: false },
+      { text: "NONE LMAO", correct: true },
     ],
   },
 
   {
-    question: "What is 6 + 2",
+    question: "Who refuses to get into the robot?",
     answers: [
       { text: "4", correct: false },
       { text: "2", correct: false },

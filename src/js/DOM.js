@@ -7,6 +7,7 @@ const DOMSelectors = {
   leaderboard: document.querySelector(".results"),
   choices: document.querySelectorAll('input[type="radio"]:checked'),
   addName: document.forms["add-name"],
+  submitButton: document.querySelector(".submit-btn"),
 };
 
 export { DOMSelectors };

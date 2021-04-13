@@ -9,7 +9,7 @@
   padding: 10rem;
 }
 
-.reveal {
+.submit-btn {
   display: flex;
   width: 20rem;
   align-items: center;
@@ -24,10 +24,10 @@
   border: none;
 }
 
-.reveal:hover {
+.submit-btn:hover {
   transform: scale(1.2);
 }
 
-.reveal:active {
+.submit-btn:active {
   transform: scale(1.5);
 }

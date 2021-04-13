@@ -79,32 +79,6 @@ const players = [
 // OK maybe make the whole quiz a form so the leaderboard runs on a submission button click
 // (That will be rlly easy)
 
-DOMSelectors.addName.addEventListener("submit", function (e) {
-  e.preventDefault();
-  //prevent default page refresh of submitted forms
-  const player = DOMSelectors.addName.querySelector('input[type="text"]').value;
-  console.log(player);
-  const allPlayers = [...players, { name: player, score: score }];
-  const leaderboardPlayers = allPlayers.sort((a, b) =>
-    a.score < b.score ? 1 : -1
-  );
-  //sorting by score, so highest at top
-  console.log(leaderboardPlayers);
-  DOMSelectors.displayContainer.innerHTML = `<h1 class="leaderboard">Leaderboard</h1>`;
-  leaderboardPlayers.forEach((individual) => {
-    DOMSelectors.displayContainer.insertAdjacentHTML(
-      "beforeend",
-      `
-    <div class="individual-results">
-        <div class="individual">${individual.name}</div>
-        <div class="individual-score ">${individual.score} of ${questions.length}</div>
-    </div>`
-    );
-  });
-  //replaces everything on page with leaderboard
-  //          why did i spend so much time on this
-  //also i need to put the rows into an actual group bc rn theyre just. hanging out without any container grouping
-});
 console.log(DOMSelectors.choices);
 // okay so you can use variables/ the ${} thingy for inputting classes and id
 // lets see how that goes????
@@ -183,13 +157,54 @@ DOMSelectors.addName.addEventListener("submit", function (e) {
       </div>
     </p>
   </div>`;
-    console.log(buttonLabels[questions.indexOf(question)].tag[0]);
+    if (document.getElementById(answerBtnTags.tag[3]).checked) {
+      console.log("yes");
+    } else {
+      console.log("no");
+    }
+    console.log(document.getElementById(answerBtnTags.tag[3]));
   });
+  DOMSelectors.questionContainer.insertAdjacentHTML(
+    "beforeend",
+    `<button class="submit-btn">Submit</button>`
+  );
+});
+DOMSelectors.submitButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  //prevent default page refresh of submitted forms
+  const player = DOMSelectors.addName.querySelector('input[type="text"]').value;
+  console.log(player);
+  const allPlayers = [...players, { name: player, score: score }];
+  const leaderboardPlayers = allPlayers.sort((a, b) =>
+    a.score < b.score ? 1 : -1
+  );
+  //sorting by score, so highest at top
+  console.log(leaderboardPlayers);
+  DOMSelectors.displayContainer.innerHTML = `<h1 class="leaderboard">Leaderboard</h1>`;
+  leaderboardPlayers.forEach((individual) => {
+    DOMSelectors.displayContainer.insertAdjacentHTML(
+      "beforeend",
+      `
+    <div class="individual-results">
+        <div class="individual">${individual.name}</div>
+        <div class="individual-score ">${individual.score} of ${questions.length}</div>
+    </div>`
+    );
+  });
+  //replaces everything on page with leaderboard
+  //          why did i spend so much time on this
+  //also i need to put the rows into an actual group bc rn theyre just. hanging out without any container grouping
 });
 //how tf do i check if its correct
-if (document.getElementById("A1").checked) {
-  console.log("checked");
-}
+
+/* questions.forEach((question) => {
+  if (
+    document.getElementById('answerBtnTags.tag[0]').value === null ||
+    document.querySelector(answerBtnTags.tag[0]).value === ""
+  ) {
+  }
+}); */
+
 //like this technically works when live buuuuuuuut how do i do anything else
 // also it only logs when i put it into console as a live expresson
 // yea no i kinda wanna just make the whole thing a form with a submit button. EZ

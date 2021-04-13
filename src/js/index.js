@@ -10,7 +10,7 @@ import { DOMSelectors } from "./DOM";
 //          woohoo im doing things backwards. what else is new.
 //next TWO consts are fillers. REPLACE WHEN THEY ARE PROPERLY MADE
 //note to self to remove all of the 'console.log's  I added lmao
-const score = 2;
+
 const questions = [
   {
     question:
@@ -60,7 +60,7 @@ const questions = [
     ],
   },
 ];
-// REPLACE ABOVE WITH FUNCTIONING VARIABLES. please
+
 // replace questions too
 const players = [
   { name: "Steve Steve", score: 1 },
@@ -79,7 +79,6 @@ const players = [
 // OK maybe make the whole quiz a form so the leaderboard runs on a submission button click
 // (That will be rlly easy)
 
-console.log(DOMSelectors.choices);
 // okay so you can use variables/ the ${} thingy for inputting classes and id
 // lets see how that goes????
 // how can i use this tho
@@ -104,7 +103,8 @@ const buttonLabels = [
 DOMSelectors.addName.addEventListener("submit", function (e) {
   e.preventDefault();
   DOMSelectors.questionContainer.innerHTML = ``;
-
+  DOMSelectors.submitButton.classList.remove("hide");
+  DOMSelectors.addName.classList.add("hide");
   //clear out name input and anything else where the questions will be
   // coming up : way too many variables for no reason. I have no idea if all of them are gonna be used
   // but hey its flexible so thats a plus. less effort later.
@@ -157,21 +157,40 @@ DOMSelectors.addName.addEventListener("submit", function (e) {
       </div>
     </p>
   </div>`;
-    if (document.getElementById(answerBtnTags.tag[3]).checked) {
-      console.log("yes");
-    } else {
-      console.log("no");
-    }
-    console.log(document.getElementById(answerBtnTags.tag[3]));
   });
-  DOMSelectors.questionContainer.insertAdjacentHTML(
-    "beforeend",
-    `<button class="submit-btn">Submit</button>`
-  );
 });
+
 DOMSelectors.submitButton.addEventListener("click", function (e) {
   e.preventDefault();
   //prevent default page refresh of submitted forms
+  let score = 0;
+  questions.forEach((question) => {
+    const answerBtnTags = buttonLabels[questions.indexOf(question)];
+    const questionNumber = questions.indexOf(question) + 1;
+
+    if (
+      document.getElementById(answerBtnTags.tag[0]).checked &&
+      question.answers[0].correct === true
+    ) {
+      ++score;
+    } else if (
+      document.getElementById(answerBtnTags.tag[1]).checked &&
+      question.answers[1].correct === true
+    ) {
+      ++score;
+    } else if (
+      document.getElementById(answerBtnTags.tag[2]).checked &&
+      question.answers[2].correct === true
+    ) {
+      ++score;
+    } else if (
+      document.getElementById(answerBtnTags.tag[3]).checked &&
+      question.answers[3].correct === true
+    ) {
+      ++score;
+    }
+    console.log(score);
+  });
   const player = DOMSelectors.addName.querySelector('input[type="text"]').value;
   console.log(player);
   const allPlayers = [...players, { name: player, score: score }];
@@ -191,19 +210,10 @@ DOMSelectors.submitButton.addEventListener("click", function (e) {
     </div>`
     );
   });
-  //replaces everything on page with leaderboard
-  //          why did i spend so much time on this
-  //also i need to put the rows into an actual group bc rn theyre just. hanging out without any container grouping
 });
 //how tf do i check if its correct
 
-/* questions.forEach((question) => {
-  if (
-    document.getElementById('answerBtnTags.tag[0]').value === null ||
-    document.querySelector(answerBtnTags.tag[0]).value === ""
-  ) {
-  }
-}); */
+// i still dont know how to check if something is correct. man.
 
 //like this technically works when live buuuuuuuut how do i do anything else
 // also it only logs when i put it into console as a live expresson
